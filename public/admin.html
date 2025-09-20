@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Additional admin styles */
+    body {
+      padding-top: 80px;
+      background: #f7f7f7;
+    }
+    .admin-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .form-actions {
+      margin-top: 1rem;
+    }
+    .form-actions button {
+      padding: 0.6rem 1.2rem;
+      background: #2ab54d;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .form-actions button:hover {
+      background: #218a3c;
+    }
+    /* Hide sections by default */
+    .admin-section { display: none; }
+    .visible { display: block; }
+    .logout-button {
+      margin-top: 1rem;
+      text-align: right;
+    }
+    .logout-button button {
+      background: #d9534f;
+    }
+  </style>
+  <script defer src="assets/js/admin.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="/" class="logo">Marisk<span>Services</span></a>
+    </div>
+  </header>
+  <div class="admin-container">
+    <h1>Admin Panel</h1>
+    <div id="login-section" class="admin-section visible">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+    <div id="admin-content" class="admin-section">
+      <h2>Add FAQ Entry</h2>
+      <form id="faq-form">
+        <div class="form-group">
+          <label for="faq-question">Question</label>
+          <input type="text" id="faq-question" required>
+        </div>
+        <div class="form-group">
+          <label for="faq-answer">Answer</label>
+          <textarea id="faq-answer" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Add FAQ</button>
+        </div>
+      </form>
+      <hr>
+      <h2>Add Gallery Images</h2>
+      <form id="gallery-form">
+        <div class="form-group">
+          <label for="before-image">Before Image</label>
+          <input type="file" id="before-image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="after-image">After Image</label>
+          <input type="file" id="after-image" accept="image/*" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Upload Images</button>
+        </div>
+      </form>
+      <div class="logout-button">
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

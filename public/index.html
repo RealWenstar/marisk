@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marisk Services Inc.</title>
+  <!-- Google Fonts for stylish typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for simple icons -->
+  <script defer src="https://kit.fontawesome.com/9c9de72d90.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Scripts for translations and chat -->
+  <script defer src="assets/js/i18n.js"></script>
+  <script defer src="assets/js/chat.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Canvas for falling leaves animation -->
+  <canvas id="leaf-canvas"></canvas>
+
+  <header>
+    <div class="nav-container">
+      <a href="#hero" class="logo">Marisk<span>Services</span></a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Language selector for localisation -->
+      <select id="lang-select" class="lang-select" aria-label="Language selector">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ru">RU</option>
+        <option value="uk">UK</option>
+        <option value="kk">KK</option>
+      </select>
+      <div class="burger" id="burger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="hero_title">Transform Your Outdoor Space</h1>
+      <p data-i18n="hero_subtitle">Creating beautiful landscapes for Calgary homes and businesses since 2003</p>
+      <a href="#contact" class="btn" data-i18n="hero_cta">Get in Touch</a>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services reveal">
+    <h2 data-i18n="services_title">Our Services</h2>
+    <p class="section-lead" data-i18n="services_lead">From concept to completion, we provide a full suite of landscaping and horticultural services.</p>
+    <div class="service-grid">
+      <div class="service-item">
+        <i class="fas fa-drafting-compass"></i>
+        <h3 data-i18n="service1_title">Design &amp; Construction</h3>
+        <p data-i18n="service1_desc">We collaborate with you to design and build stunning outdoor spaces, patios, and walkways using natural stone and brick.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-tree"></i>
+        <h3 data-i18n="service2_title">Planting &amp; Gardening</h3>
+        <p data-i18n="service2_desc">From trees and shrubs to vibrant flowers, we plant and nurture a variety of vegetation to bring your garden to life.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-seedling"></i>
+        <h3 data-i18n="service3_title">Sod &amp; Turf</h3>
+        <p data-i18n="service3_desc">Installation of lush sod for an instant green lawn and expert advice on lawn care and maintenance.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-broom"></i>
+        <h3 data-i18n="service4_title">Maintenance</h3>
+        <p data-i18n="service4_desc">Spring and fall clean‑ups, summer maintenance and winter snow removal keep your property pristine year round.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-water"></i>
+        <h3 data-i18n="service5_title">Water Features</h3>
+        <p data-i18n="service5_desc">Creation of ponds, waterfalls and pebble fountains to add sound and movement to your landscape design.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-leaf"></i>
+        <h3 data-i18n="service6_title">Green Roof Projects</h3>
+        <p data-i18n="service6_desc">Specialized green roof and rooftop garden installations using proven eco‑friendly technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery reveal">
+    <h2 data-i18n="gallery_title">Before &amp; After Gallery</h2>
+    <p class="section-lead" data-i18n="gallery_lead">See how our expertise turns ordinary spaces into extraordinary landscapes.</p>
+    <div id="ba-wrapper" class="before-after-wrapper">
+      <!-- Dynamic before/after pairs will be injected here by main.js -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about reveal">
+    <h2 data-i18n="about_title">Our Story</h2>
+    <p class="section-lead" data-i18n="about_lead">Family‑owned and operated, Marisk Services Inc. has been shaping Calgary’s landscapes for over two decades.</p>
+    <div class="about-content">
+      <p data-i18n="about_text1">Founded in 2003 by horticultural experts Alexander Markovin and Galina Nikitina, Marisk Services grew from a passion for greenery into a full‑service landscaping company. Both Alexander and Galina hold PhDs in horticulture, forestry and landscaping from the Kazakhstan University of Agriculture. After immigrating to Canada in 2001, they honed their craft at Calgary golf courses and local farms before launching their own business.</p>
+      <p data-i18n="about_text2">Our team brings more than 15 years of experience in agricultural, forestry and landscape design to every project. We specialise in industrial landscaping, residential gardens, green‑roof projects and personalised outdoor living spaces that reflect your taste and lifestyle.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2001</div>
+        <div class="timeline-text" data-i18n="timeline_2001">Alexander and Galina arrive in Canada and start working as horticultural specialists.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2003</div>
+        <div class="timeline-text" data-i18n="timeline_2003">Marisk Services Inc. is founded with a mission to create beautiful, sustainable landscapes.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Present</div>
+        <div class="timeline-text" data-i18n="timeline_present">Continuing to beautify homes and businesses across Calgary and beyond with customised landscape solutions.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact reveal">
+    <h2 data-i18n="contact_title">Contact &amp; Careers</h2>
+    <p class="section-lead" data-i18n="contact_lead">Ready to transform your outdoor space or join our team? Get in touch today.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h3 data-i18n="contact_us_title">Contact Us</h3>
+        <p><strong data-i18n="contact_phone_label">Phone</strong>: <a href="tel:+14038073913">403.807.3913</a></p>
+        <p><strong data-i18n="contact_email_label">Email</strong>: <a href="mailto:amarkov@marisk.ca">amarkov@marisk.ca</a></p>
+        <p data-i18n="contact_address">Calgary, Alberta, Canada</p>
+      </div>
+      <div class="contact-item">
+        <h3 data-i18n="join_our_team_title">Join Our Team</h3>
+        <p data-i18n="join_our_team_desc">We’re always looking for hardworking seasonal employees between May and June. If you love working outdoors and have a passion for gardens, send us your resume.</p>
+        <p><a href="mailto:amarkov@marisk.ca" class="btn small" data-i18n="join_our_team_button">Send Resume</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> <span data-i18n="footer_text">Marisk Services Inc. All rights reserved.</span></p>
+  </footer>
+
+  <!-- Chat Widget -->
+  <div id="chat-widget" class="chat-widget">
+    <!-- Chat toggle button -->
+    <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
+      <i class="fas fa-comments"></i>
+    </button>
+    <!-- Chat window -->
+    <div class="chat-window" id="chat-window">
+      <div class="chat-header" data-i18n="chat_title">Gardening Assistant</div>
+      <div class="chat-welcome">
+        <p data-i18n="chat_welcome">Hi! I’m your gardening assistant. You can ask me questions such as:</p>
+      </div>
+      <div class="chat-suggestions">
+        <p class="chat-suggestions-title" data-i18n="chat_suggestions_title">Try asking:</p>
+        <ul id="chat-suggestions-list"></ul>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="" data-i18n-placeholder="chat_input_placeholder">
+        <button id="chat-send" data-i18n="chat_send_button">Send</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
